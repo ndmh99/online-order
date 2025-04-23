@@ -120,10 +120,6 @@ h2 {
     background: #f8d7da;
     color: #900;
 }
-.cart-section {
-    min-width: 250px;
-    max-width: 320px;
-}
 #cart-items {
     min-height: 60px;
     margin-bottom: 1rem;
