@@ -266,7 +266,7 @@ h2 {
 .form-row {
     display: flex;
     flex-direction: column;
-    gap: 1.34rem;;
+    margin-bottom: 10px;
 }
 .form-row label {
     font-weight: 500;
