@@ -44,6 +44,11 @@ h2 {
     align-self: flex-start;
     box-sizing: border-box;
 }
+
+.cart-section {
+    min-width: 250px;
+}
+
 .menu-items {
     display: flex;
     flex-direction: column;
