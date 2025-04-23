@@ -1,0 +1,97 @@
+<!-- Online Food Ordering Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food Online | VAN 168 COFFEE</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Order Online</h1>
+    </header>
+    <main class="main-content">
+        <section id="menu" class="menu-section">
+            <h2>Menu</h2>
+            <div class="menu-slider-controls">
+                <button id="slider-prev" class="slider-btn">Prev</button>
+                <span id="slider-pages" class="slider-pages"></span>
+                <button id="slider-next" class="slider-btn">Next</button>
+            </div>
+            <div id="menu-items" class="menu-items menu-slider"></div>
+        </section>
+        <aside id="cart" class="cart-section">
+            <h2>Your Cart <span id="cart-count" class="cart-count"></span></h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <div class="cart-actions">
+                <button id="checkout-btn" class="btn primary" disabled>Checkout</button>
+                <button id="clear-cart-btn" class="btn round cart-item-remove" title="Clear cart" style="display:none">&times;</button>
+            </div>
+        </aside>
+        <section id="checkout" class="checkout-section hidden">
+            <h2>Checkout</h2>
+            <div id="checkout-summary" class="checkout-summary" style="margin-bottom:1.2rem;"></div>
+            <form id="checkout-form">
+                <div class="form-row">
+                    <label for="checkout-name">Name</label>
+                    <input type="text" id="checkout-name" name="name" required autocomplete="name" placeholder="Your name">
+                </div>
+                <div class="form-row">
+                    <label for="checkout-phone">Phone</label>
+                    <input type="tel" id="checkout-phone" name="phone" required autocomplete="tel" placeholder="e.g. 555-123-4567">
+                </div>
+                <div class="form-row">
+                    <label for="checkout-email">Email <span class="optional">(optional)</span></label>
+                    <input type="email" id="checkout-email" name="email" autocomplete="email" placeholder="you@email.com">
+                </div>
+                <div class="form-row pickup-delivery-row">
+                    <span>Order Type</span>
+                    <label class="radio-label"><input type="radio" name="orderType" value="pickup" checked> Pickup</label>
+                    <label class="radio-label"><input type="radio" name="orderType" value="delivery"> Delivery</label>
+                </div>
+                <div class="form-row" id="address-row" style="display:none">
+                    <label for="checkout-address">Address</label>
+                    <input type="text" id="checkout-address" name="address" autocomplete="street-address" placeholder="Delivery address">
+                </div>
+                <div class="form-row">
+                    <label for="checkout-time">Preferred Pickup Time</label>
+                    <select id="checkout-time" name="pickupTime">
+                        <option value="ASAP">ASAP</option>
+                        <option value="8:00-8:30">8:00-8:30</option>
+                        <option value="8:30-9:00">8:30-9:00</option>
+                        <option value="9:00-9:30">9:00-9:30</option>
+                        <option value="9:30-10:00">9:30-10:00</option>
+                        <option value="10:00-10:30">10:00-10:30</option>
+                        <option value="10:30-11:00">10:30-11:00</option>
+                        <option value="11:00-11:30">11:00-11:30</option>
+                        <option value="11:30-12:00">11:30-12:00</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="checkout-notes">Special Instructions <span class="coffee-icon" title="How do you take your coffee?">☕</span></label>
+                    <textarea id="checkout-notes" name="notes" rows="2" placeholder="e.g. Oat milk, less sweet, etc."></textarea>
+                </div>
+                <div class="form-row form-actions">
+                    <button type="submit" class="btn primary">Place My Coffee Order ☕</button>
+                    <button type="button" id="cancel-checkout" class="btn">Cancel</button>
+                </div>
+            </form>
+        </section>
+        <div id="order-confirmation" class="order-confirmation hidden"></div>
+        <div id="checkout-overlay" class="checkout-overlay hidden"></div>
+    </main>
+    <footer class="site-footer">
+        <div class="promo-poster-container">
+            <img src="https://ik.imagekit.io/ec18yjhnk/kD5vGGSlBgRY5jNcEC0hbVvIAZh1/373e7702-1cf1-4f99-a4ea-410f99f0d335.png" alt="Current Promotion" class="promo-poster" />
+            <img src="https://ik.imagekit.io/ec18yjhnk/kD5vGGSlBgRY5jNcEC0hbVvIAZh1/373e7702-1cf1-4f99-a4ea-410f99f0d335.png" alt="Current Promotion" class="promo-poster" />
+            <img src="https://ik.imagekit.io/ec18yjhnk/kD5vGGSlBgRY5jNcEC0hbVvIAZh1/373e7702-1cf1-4f99-a4ea-410f99f0d335.png" alt="Current Promotion" class="promo-poster" />
+            <img src="https://ik.imagekit.io/ec18yjhnk/kD5vGGSlBgRY5jNcEC0hbVvIAZh1/373e7702-1cf1-4f99-a4ea-410f99f0d335.png" alt="Current Promotion" class="promo-poster" />
+            <img src="https://ik.imagekit.io/ec18yjhnk/kD5vGGSlBgRY5jNcEC0hbVvIAZh1/373e7702-1cf1-4f99-a4ea-410f99f0d335.png" alt="Current Promotion" class="promo-poster" />
+        </div>
+    </footer>
+    <script src="menu.js"></script>
+    <script src="order.js"></script>
+</body>
+</html>
