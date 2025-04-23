@@ -1,6 +1,6 @@
-# Online Ordering
+# Simple Customizable Template for Online Ordering
 
-This project provides a very simple responsive online food ordering page.
+This project provides a very simple responsive online ordering page.
 
 ## Features
 - Add items to cart
